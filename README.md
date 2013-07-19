@@ -33,6 +33,15 @@ int pathmatch(const char *pattern, const char *text);
 
 Returns 1 on successful match, 0 otherwise
 
+Features
+--------
+
+- Very small (<50 LOC)
+- C89 compliant
+- MIT License
+- Zero dependencies
+- No configuration - easily embeddable
+
 License
 -------
 
