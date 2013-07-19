@@ -1,15 +1,22 @@
-#include <stdio.h>
+#include <iostream>
 #include <pathmatch.h>
 
-int test(const char *pattern, const char *text, int expect) {
-    int actual = path_match(pattern, text);
+int test(const std::string &pattern, const std::string &text, bool expect) {
+    bool actual = pathmatch::match(pattern, text);
     if (actual == expect) {
-        printf("OK: ");
+        std::cout << "OK: ";
     } else {
-        printf("ERROR: ");
+        std::cout << "ERROR: ";
     }
-    printf("Pattern: %s Text: %s Match: %d\n", pattern, text, actual);
-    return actual != expect;
+    std::cout << "Pattern: "
+              << pattern
+              << " Text: "
+              << text
+              << " Match: "
+              << actual
+              << std::endl;
+
+    return actual == expect ? 0 : 1;
 }
 
 int main() {

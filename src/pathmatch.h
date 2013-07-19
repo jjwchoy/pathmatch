@@ -15,6 +15,23 @@
  * Returns 1 on successful match, 0 otherwise
  *
  */
-int pathmatch(const char *pattern, const char *text);
+#ifdef __cplusplus
+extern "C" {
+#endif
+int path_match(const char *pattern, const char *text);
+#ifdef __cplusplus
+}
+
+#include <string>
+
+namespace pathmatch {
+
+bool match(const std::string &pattern, const std::string &text) {
+    return ::path_match(pattern.c_str(), text.c_str());
+}
+
+}
+#endif
+
 
 #endif

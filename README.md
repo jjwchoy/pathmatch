@@ -27,17 +27,31 @@ Examples
 API
 ---
 
+C API
+
 ```
-int pathmatch(const char *pattern, const char *text);
+int path_match(const char *pattern, const char *text);
 ```
 
 Returns 1 on successful match, 0 otherwise
+
+C++ API
+```
+namespace pathmatch {
+
+bool match(const std::string &pattern, const std::string &text);
+
+}
+```
+
+Returns `true` on successful match, `false` otherwise
 
 Features
 --------
 
 - Very small (<50 LOC)
 - C89 compliant
+- C++ interface
 - MIT License
 - Zero dependencies
 - No configuration - easily embeddable

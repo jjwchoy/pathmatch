@@ -2,9 +2,7 @@
 
 #include <assert.h>
 
-static int match_wildcard(const char *pattern, const char *text, int allowSlash);
-
-int pathmatch(const char *pattern, const char *text) {
+int path_match(const char *pattern, const char *text) {
     assert(pattern && text);
     while (pattern[0] != '\0' && text[0] != '\0') {
         if (pattern[0] == '?') {
@@ -27,7 +25,7 @@ int pathmatch(const char *pattern, const char *text) {
                 ++pattern;
             }
             do {
-                if (pathmatch(pattern, text)) {
+                if (path_match(pattern, text)) {
                     return 1;
                 }
             } while (text[0] != '\0' && (*text++ != '/' || allow_slash));
