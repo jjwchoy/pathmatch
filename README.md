@@ -6,10 +6,10 @@ pathmatch is a very simple path matching library, designed for fast matching of 
 Language
 --------
 
-`*` - matches zero-or-more of any character(s) but '/'
-`**` - matches zero-or-more of any character(s)
-`?` - matches exactly one of any character but '/'
-`??` - matches exactly one of any character
+- `*` - matches zero-or-more of any character(s) but '/'
+- `**` - matches zero-or-more of any character(s)
+- `?` - matches exactly one of any character but '/'
+- `??` - matches exactly one of any character
 
 All other characters specify literal matches
 
