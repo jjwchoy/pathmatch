@@ -22,7 +22,7 @@ Examples
 - `/foo/*/baz` matches `/foo/bar/baz` and `/foo/bob/baz` but not `/foo/baz` or `/foo/bar/bob/baz`
 - `/foo/**/baz` matches `/foo/bar/baz` and `/foo/bob/baz` and `/foo/bar/bob/baz` but not `/foo/baz`
 - `/foo?ar` matches `/foobar` and `/foocar` but not `/foo/ar`
-- `/foo??ar` matches /foobar` and `/foocar` and `/foo/ar`
+- `/foo??ar` matches `/foobar` and `/foocar` and `/foo/ar`
 
 API
 ---
