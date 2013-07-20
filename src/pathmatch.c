@@ -23,6 +23,9 @@ int path_match(const char *pattern, const char *text) {
             while (pattern[0] == '*') {
                 ++pattern;
             }
+            if (allow_slash && pattern[0] == '\0') {
+                return 1;
+            }
             do {
                 if (path_match(pattern, text)) {
                     return 1;
