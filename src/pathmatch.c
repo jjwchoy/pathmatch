@@ -20,8 +20,7 @@ int path_match(const char *pattern, const char *text) {
             ++text;
         } else if (pattern[0] == '*') {
             int allow_slash = pattern[1] == '*';
-            ++pattern;
-            if (allow_slash) {
+            while (pattern[0] == '*') {
                 ++pattern;
             }
             do {
